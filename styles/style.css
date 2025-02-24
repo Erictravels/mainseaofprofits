@@ -35,8 +35,8 @@ header {
 }
 
 header .logo img {
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 100px;
 }
 
 header nav ul {
@@ -48,13 +48,14 @@ header nav ul {
 }
 
 header nav ul li {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: 14px;
 }
 
 header nav ul li a.btn-login,
@@ -78,6 +79,19 @@ header nav ul li a.btn-login:hover {
 
 header nav ul li a.btn-signup:hover {
   background: #218838;
+}
+
+#theme-toggle {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background: #0056b3;
 }
 
 /* Hero Section */
@@ -112,73 +126,194 @@ header nav ul li a.btn-signup:hover {
   color: #0056b3;
 }
 
-/* About Us */
-.about {
+/* Features Section */
+.features {
   padding: 50px 0;
+  background: #f9f9f9;
   text-align: center;
 }
 
-.about h2 {
+.features h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* FAQs */
-.faqs {
-  padding: 50px 0;
-  background: #fff;
-}
-
-.faqs h2 {
-  font-size: 2rem;
-  text-align: center;
   margin-bottom: 30px;
 }
 
-.faq-item {
-  margin-bottom: 20px;
+.feature-item {
+  background: #fff;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 50px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pricing-plan {
   background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.pricing-plan h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pricing-plan p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.pricing-plan ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-plan ul li {
+  margin-bottom: 10px;
+}
+
+.pricing-plan .btn-primary {
+  width: 100%;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial strong {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.slider-controls {
+  margin-top: 20px;
+}
+
+.slider-controls button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
   border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.slider-controls button:hover {
+  background: #0056b3;
+}
+
+/* Newsletter Section */
+.newsletter {
+  padding: 50px 0;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.newsletter .btn-primary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--primary-color);
   cursor: pointer;
 }
 
-.faq-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  position: relative;
-  padding-right: 30px; /* Space for the caret */
-}
-
-.faq-item h3::after {
-  content: "▼"; /* Caret symbol */
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.faq-item.active h3::after {
-  transform: translateY(-50%) rotate(180deg); /* Rotate caret when active */
-}
-
-.faq-item p {
-  display: none;
-  font-size: 1rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-.faq-item.active p {
-  display: block;
+.newsletter .btn-primary:hover {
+  background: #f0f0f0;
 }
 
 /* Footer */
@@ -213,6 +348,85 @@ footer p {
   background: #0056b3;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header {
+  background: #1f1f1f;
+}
+
+.dark-mode .features {
+  background: #1f1f1f;
+}
+
+.dark-mode .feature-item {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode .feature-item p {
+  color: #e0e0e0;
+}
+
+.dark-mode .pricing {
+  background: #1f1f1f;
+}
+
+.dark-mode .pricing-plan {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode .pricing-plan p {
+  color: #e0e0e0;
+}
+
+.dark-mode .pricing-plan ul li {
+  color: #e0e0e0;
+}
+
+.dark-mode .testimonials {
+  background: #1f1f1f;
+}
+
+.dark-mode .testimonial {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode .testimonial p {
+  color: #e0e0e0;
+}
+
+.dark-mode .testimonial strong {
+  color: #ffffff;
+}
+
+.dark-mode .newsletter {
+  background: #1f1f1f;
+}
+
+.dark-mode .newsletter h2 {
+  color: #ffffff;
+}
+
+.dark-mode .newsletter input[type="email"] {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode .newsletter .btn-primary {
+  background: #ffffff;
+  color: #121212;
+}
+
+.dark-mode .newsletter .btn-primary:hover {
+  background: #f0f0f0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   header {
@@ -221,16 +435,28 @@ footer p {
   }
 
   header .logo img {
-    height: 150px;
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
   }
 
   header nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   header nav ul li {
-    margin: 10px 0;
+    margin: 5px;
+  }
+
+  header nav ul li a {
+    font-size: 12px;
+  }
+
+  header nav ul li a.btn-login,
+  header nav ul li a.btn-signup {
+    padding: 5px 8px;
   }
 
   .hero h1 {
@@ -239,6 +465,10 @@ footer p {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
   }
 
   .about p {
@@ -251,5 +481,15 @@ footer p {
 
   .faq-item p {
     font-size: 0.9rem;
+  }
+
+  .pricing-plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-plan {
+    width: 100%;
+    max-width: 300px;
   }
 }
