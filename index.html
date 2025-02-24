@@ -5,21 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SeaOfProfits - Home</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
+  
   <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/67b7a67d8865f1190d867fe5/1ikim4n7q';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67b7a67d8865f1190d867fe5/1ikim4n7q';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
   </script>
   <!--End of Tawk.to Script-->
+
   <!-- Header -->
   <header>
     <div class="logo">
@@ -30,41 +33,123 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">FAQs</a></li>
-        <li><a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-login">Login</a></li>
-        <li><a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-signup">Sign Up</a></li>
+        <li><a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-login" rel="noopener noreferrer">Login</a></li>
+        <li><a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-signup" rel="noopener noreferrer">Sign Up</a></li>
       </ul>
     </nav>
+    <button id="theme-toggle">Toggle Dark Mode</button>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="container">
       <h1>Welcome to SeaOfProfits</h1>
       <p>Your gateway to profitable trading with AI.</p>
-      <a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-primary">Get Started</a>
+      <a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-primary" rel="noopener noreferrer">Get Started</a>
+    </div>
+  </section>
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize": true,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "allow_symbol_change": true,
+  "calendar": false,
+  "support_host": "https://www.tradingview.com"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="feature-item" data-aos="fade-up">
+        <h3>AI-Powered Trading</h3>
+        <p>Our advanced algorithms analyze the market in real-time to maximize profits.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up">
+        <h3>User-Friendly Interface</h3>
+        <p>Designed for both beginners and experienced traders.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up">
+        <h3>24/7 Support</h3>
+        <p>Our team is always here to help you with any questions.</p>
+      </div>
     </div>
   </section>
 
-  <!-- About Us -->
-  <section class="about">
+  <!-- Pricing Section -->
+  <section class="pricing">
     <div class="container">
-      <h2>About Us</h2>
-      <p>SeaOfProfits is a cutting-edge platform designed to help you achieve financial freedom through AI-powered trading solutions.</p>
+      <h2>Pricing Plans</h2>
+      <div class="pricing-plans">
+        <div class="pricing-plan" data-aos="fade-up">
+          <h3>Basic</h3>
+          <p>$29/month</p>
+          <ul>
+            <li>AI Trading Tools</li>
+            <li>24/7 Support</li>
+            <li>Basic Analytics</li>
+          </ul>
+          <a href="#" class="btn-primary">Choose Plan</a>
+        </div>
+        <div class="pricing-plan" data-aos="fade-up">
+          <h3>Pro</h3>
+          <p>$99/month</p>
+          <ul>
+            <li>Advanced AI Tools</li>
+            <li>Priority Support</li>
+            <li>Full Analytics</li>
+          </ul>
+          <a href="#" class="btn-primary">Choose Plan</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- FAQs -->
-  <section class="faqs">
+  <!-- Testimonials Section -->
+  <section class="testimonials" data-aos="fade-up">
     <div class="container">
-      <h2>FAQs</h2>
-      <div class="faq-item">
-        <h3>What is SeaOfProfits?</h3>
-        <p>SeaOfProfits is an AI-powered trading platform that automates Forex trading for maximum profitability.</p>
+      <h2>What Our Users Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <p>"SeaOfProfits has transformed my trading experience. Highly recommended!"</p>
+          <p><strong>- John Doe</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"The AI tools are incredibly accurate and easy to use. Great platform!"</p>
+          <p><strong>- Jane Smith</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"I’ve never seen such consistent results. SeaOfProfits is a game-changer!"</p>
+          <p><strong>- Mike Johnson</strong></p>
+        </div>
       </div>
-      <div class="faq-item">
-        <h3>How do I get started?</h3>
-        <p>Sign up, choose a plan, and start trading with our AI bots.</p>
+      <div class="slider-controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
       </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter" data-aos="fade-up">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
     </div>
   </section>
 
@@ -80,5 +165,9 @@
 
   <!-- JavaScript -->
   <script src="scripts/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
