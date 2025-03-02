@@ -493,3 +493,11 @@ body.dark-mode {
     max-width: 300px;
   }
 }
+
+.popular-choice {
+  color: red; /* Text color */
+  font-weight: bold;
+  background-color: yellow; /* Background color */
+  padding: 5px; /* Adds space around text */
+  border-radius: 5px; /* Rounds the background edges */
+}
