@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100 Cash CFD"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR to USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "GOLDSPOT",
+      "proName": "ICMARKETS:XAUUSD"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "colorTheme": "light",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SeaOfProfits - Home</title>
@@ -8,7 +50,19 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-  
+
+<!-- Social Proof Widget -->
+<div id="social-proof-widget">
+  <div class="widget-header">
+    <h3>Recent Activity</h3>
+    <span class="close-widget">&times;</span>
+  </div>
+  <div id="social-proof-message-container">
+    <!-- Single message will be injected here -->
+  </div>
+</div>
+
+
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -23,6 +77,18 @@
   </script>
   <!--End of Tawk.to Script-->
 
+  <!-- Pop-up Disclaimer -->
+  <div id="disclaimer-popup" class="disclaimer-popup">
+    <div class="disclaimer-content">
+      <span id="close-disclaimer" class="close-disclaimer">&times;</span>
+      <h2>Disclaimer</h2>
+      <p>At Sea of Profits, we are dedicated to providing innovative trading and strategies to help enhance your trading experience. While our systems are designed to assist in informed trading decisions, all trading involves some level of risk, and market conditions may vary. We encourage responsible trading and recommend that you fully understand this.
+
+        By using our services, you acknowledge this, and that we are not financial advisor. We’re here to support you on your journey to smarter and more confident trading!.</p>
+      <button id="accept-disclaimer">I Understand</button>
+    </div>
+  </div>
+
   <!-- Header -->
   <header>
     <div class="logo">
@@ -31,10 +97,10 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-login" rel="noopener noreferrer">Login</a></li>
-        <li><a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-signup" rel="noopener noreferrer">Sign Up</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="https://form.jotform.com/250535148464054" class="btn-login" rel="noopener noreferrer">Subscribe</a></li>
+        <li><a href="https://form.jotform.com/250535148464054" class="btn-signup" rel="noopener noreferrer">Sign Up</a></li>
       </ul>
     </nav>
     <button id="theme-toggle">Toggle Dark Mode</button>
@@ -45,29 +111,28 @@
     <div class="container">
       <h1>Welcome to SeaOfProfits</h1>
       <p>Your gateway to profitable trading with AI.</p>
-      <a href="https://forms.gle/i6SLt1hmmwfHueuo7" class="btn-primary" rel="noopener noreferrer">Get Started</a>
+      <p><i>"Where Smart Algorithms Meet Consistent Profits — Trust the Process."</i></p>
+      <a href="https://form.jotform.com/250535148464054" class="btn-primary" rel="noopener noreferrer">Get Started</a>
     </div>
   </section>
-  <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container" style="height:100%;width:100%">
-  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-  {
-  "autosize": true,
-  "symbol": "NASDAQ:AAPL",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "en",
-  "allow_symbol_change": true,
-  "calendar": false,
-  "support_host": "https://www.tradingview.com"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+
+  <!-- About Us Section -->
+  <section id="about-us" class="about-us" data-aos="fade-up">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>For the past <strong>Decades</strong>, SeaOfProfits has been at the forefront of AI-driven trading, delivering consistent and profitable results for our clients. Our platform is trusted by thousands of traders worldwide, making it one of the <strong>best trading platforms</strong> available today.</p>
+      <p>Here’s why SeaOfProfits stands out:</p>
+      <ul>
+        <li>✅ <strong>Proven Track Record</strong>: Decades of profitable trading with a success rate of over 90%.</li>
+        <li>✅ <strong>Client-First Approach</strong>: Your funds remain in your custody at all times. We never have access to withdraw or move your money.</li>
+        <li>✅ <strong>Advanced AI Algorithms</strong>: Our cutting-edge technology analyzes the market in real-time to maximize profits and minimize risks.</li>
+        <li>✅ <strong>24/7 Support</strong>: Our dedicated team is always available to assist you with any questions or concerns.</li>
+        <li>✅ <strong>User-Friendly Interface</strong>: Designed for both beginners and experienced traders, making it easy to get started.</li>
+      </ul>
+      <p>Join SeaOfProfits today and experience the future of trading. Let our AI-powered platform work for you, so you can focus on what truly matters.</p>
+      <a href="https://form.jotform.com/250535148464054" class="btn-primary">Get Started Now</a>
+    </div>
+  </section>
 
   <!-- Features Section -->
   <section class="features">
@@ -88,32 +153,74 @@
     </div>
   </section>
 
+  <!-- Trading Widget Section -->
+  <section class="trading-widget">
+    <div class="container">
+      <h2>Live Forex Market Overview</h2>
+      <div class="tradingview-widget-container">
+        <!-- TradingView Widget -->
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+          {
+            "width": "100%",
+            "height": "500",
+            "currencies": [
+              "EUR",
+              "USD",
+              "JPY",
+              "GBP",
+              "CHF",
+              "AUD",
+              "CAD",
+              "NZD",
+              "CNY"
+            ],
+            "isTransparent": true,
+            "colorTheme": "light",
+            "locale": "en"
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+
+
+  
   <!-- Pricing Section -->
   <section class="pricing">
     <div class="container">
       <h2>Pricing Plans</h2>
       <div class="pricing-plans">
         <div class="pricing-plan" data-aos="fade-up">
-          <h3>Basic</h3>
-          <p>$30/month</p>
+          <h3>Weekly</h3>
+          <p>$10/week</p>
           <ul>
-            <li>Advance AI Trading Connection</li>
+            <li>AI Trading Connection</li>
             <li>24/7 Support</li>
-            <li>Basic Analytics</li>
+            <li>Weekly connection</li>
           </ul>
-          <a href="#" class="btn-primary">Choose Plan</a>
+          <a href="https://form.jotform.com/250535148464054" class="btn-primary">Choose Plan</a>
         </div>
         <div class="pricing-plan" data-aos="fade-up">
-          <h3>Pro</h3>
-          <span class="popular-choice">POPULAR CHOICE </span>
-          <p><del>$200</del> $150/Year</p>
+          <h3>Monthly</h3>
+          <p>$30/month</p>
           <ul>
-            <li>Advanced AI Trading Connection</li>
-            <li>Priority Support</li>
-            <li>Full Analytics</li>
-            <li>Long Term Plan and More Profitable</li>
+            <li>Advanced AI Connection</li>
+            <li>24/7 Support</li>
+            <li>Monthly Connection</li>
           </ul>
-          <a href="#" class="btn-primary">Choose Plan</a>
+          <a href="https://form.jotform.com/250535148464054" class="btn-primary">Choose Plan</a>
+        </div>
+        <div class="pricing-plan" data-aos="fade-up">
+          <h3>Premium</h3>
+          <span class="popular-choice">POPULAR CHOICE </span>
+          <p><del>$200</del> $150/year</p>
+          <ul>
+            <li>AI Trading Connection</li>
+            <li>24/7 Support</li>
+            <li>Yearly Connection</li>
+          </ul>
+          <a href="https://form.jotform.com/250535148464054" class="btn-primary">Choose Plan</a>
         </div>
       </div>
     </div>
@@ -136,14 +243,6 @@
           <p>"I’ve never seen such consistent results. SeaOfProfits is a game-changer!"</p>
           <p><strong>- Mike Johnson</strong></p>
         </div>
-        <div class="testimonial">
-          <p>"I’ve never such a true profit printer. SeaOfProfits has changed my financial situation!"</p>
-          <p><strong>- Esther Diamond</strong></p>
-        </div>
-        <div class="testimonial">
-          <p>"I almost lost hope on trading, but Sea of Profits reinstated my hope. I'm so happy, Highly Recommended!"</p>
-          <p><strong>- Gospel Ozioma</strong></p>
-        </div>
       </div>
       <div class="slider-controls">
         <button class="prev">&#10094;</button>
@@ -152,13 +251,51 @@
     </div>
   </section>
 
-  <!-- Newsletter Signup -->
-  <section class="newsletter" data-aos="fade-up">
+  <!-- Call-to-Action Section -->
+  <section class="cta" data-aos="fade-up">
+    <div class="container">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Join SeaOfProfits today and unlock the power of AI-driven trading.</p>
+      <a href="https://form.jotform.com/250535148464054" class="btn-primary">Get Started Now</a>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faqs" class="faqs">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item" data-aos="fade-up">
+        <h3>What is SeaOfProfits?</h3>
+        <p>SeaOfProfits is an AI-powered trading platform that automates Forex trading for maximum profitability.</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <h3>How do I get started?</h3>
+        <p>Sign up, choose a plan, and start trading with our AI bots.</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <h3>Is SeaOfProfits safe to use?</h3>
+        <p>Yes, we utilize an advanced trading algorithm. SeaOfProfit has been meticulously designed with safety as a paramount consideration. The system adheres to stringent risk management protocols to safeguard your capital, which include:
+          ✅ Controlled lot sizes (no reckless overtrading)
+          ✅ Stop-loss & risk limits to avoid major drawdowns
+          ✅ Steady, consistent growth instead of high-risk gambling</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <h3>Why Choose SeaOfProfits?</h3>
+        <p>Your account remains fully in your control at all times. The AI bot only executes trades based on the set strategy, and you can disconnect it anytime.
+
+          Your funds stay in your account—<b>WE don’t have access to withdraw or move your money.</b> It's completely safe to use.".</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
     <div class="container">
       <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with the latest trading insights, tips, and exclusive offers.</p>
       <form action="#" method="POST">
-        <input type="email" name="email" placeholder="Your Email" required>
-        <button type="submit" class="btn-primary">Subscribe</button>
+        <input type="email" name="email" placeholder="Coming Soon!!!" required>
+        <button type="submit" class="btn-primary">Coming Soon!!!</button>
       </form>
     </div>
   </section>
