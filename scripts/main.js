@@ -127,11 +127,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Social Proof Widget
 const socialProofMessages = [
-  { name: "John Doe", action: "signed up", avatar: "https://i.pravatar.cc/40?img=1" },
-  { name: "Jane Smith", action: "subscribed to the newsletter", avatar: "https://i.pravatar.cc/40?img=2" },
-  { name: "Mike Johnson", action: "purchased a weekly plan", avatar: "https://i.pravatar.cc/40?img=3" },
-  { name: "Sarah Lee", action: "joined the platform", avatar: "https://i.pravatar.cc/40?img=4" },
-  { name: "Alex Brown", action: "started a free trial", avatar: "https://i.pravatar.cc/40?img=5" },
+  { name: "John Doe From Canada", action: "signed up", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Esther Madu From Nigeria", action: "subscribed to the monthly", avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Mike Johnson From South Africa", action: "purchased a weekly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Sarah Lee From Malasia", action: "joined the platform", avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Ademola Seun From Nigeria", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Collins Kings From Finland", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "MEZIDON From NIgeria", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Arinze Samuel From Nigeria", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Asa Amara From UK", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Mbada From Nigeria", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Rankur From India", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Royce From Singapore", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Jalal From Bangladesh", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
 ];
 
 const socialProofWidget = document.getElementById('social-proof-widget');
@@ -143,9 +151,31 @@ function getRandomMessage() {
   return socialProofMessages[randomIndex];
 }
 
+function getRandomTimestamp() {
+  const timeUnits = [
+    { unit: "second", value: 1, label: "Just now" },
+    { unit: "minute", value: 60, label: "minutes ago" },
+    { unit: "hour", value: 3600, label: "hours ago" },
+    { unit: "day", value: 86400, label: "days ago" },
+  ];
+
+  // Randomly select a time unit (e.g., seconds, minutes, hours, days)
+  const randomUnit = timeUnits[Math.floor(Math.random() * timeUnits.length)];
+
+  // Generate a random number for the selected unit
+  const randomValue = Math.floor(Math.random() * 20) + 1; // Random number between 1 and 20
+
+  // Format the timestamp
+  if (randomUnit.unit === "second" && randomValue <= 5) {
+    return "Just now";
+  } else {
+    return `${randomValue} ${randomUnit.label}`;
+  }
+}
+
 function showSocialProofMessage() {
   const message = getRandomMessage();
-  const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const timestamp = getRandomTimestamp(); // Use random timestamp
 
   const messageElement = document.createElement('div');
   messageElement.classList.add('social-proof-message');
@@ -172,7 +202,7 @@ function showSocialProofMessage() {
 }
 
 // Start the social proof simulation
-setInterval(showSocialProofMessage, 7000); // Show a new message every 7 seconds
+setInterval(showSocialProofMessage, 10000); // Show a new message every 10 seconds
 
 // Close widget functionality
 closeWidgetButton.addEventListener('click', () => {
