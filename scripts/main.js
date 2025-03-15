@@ -142,6 +142,10 @@ const socialProofMessages = [
   { name: "Jalal From Bangladesh", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
   { name: "Mario Castro From Coasta Rica", action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
   { name: "Ismail Aremu From Nigeria", action: "purchased a monthly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Kokoyi A. From USA", action: "purchased a monthly plan", avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Happiness Okobi From Nigeria", action: "purchased a monthly plan", avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Dario Arevalo From Ecuador, South America", action: "purchased a weekly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Oswaldo Arpi From Ecuador, South America" , action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
 ];
 
 const socialProofWidget = document.getElementById('social-proof-widget');
