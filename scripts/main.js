@@ -146,6 +146,10 @@ const socialProofMessages = [
   { name: "Happiness Okobi From Nigeria", action: "purchased a monthly plan", avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 100)}.jpg` },
   { name: "Dario Arevalo From Ecuador, South America", action: "purchased a weekly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
   { name: "Oswaldo Arpi From Ecuador, South America" , action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Taiwo Olusegun From Lagos, Nigeria" , action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Kevin Wieler From Canada" , action: "purchased a monthly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Chika Okechukwu From Nigeria" , action: "purchased a yearly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
+  { name: "Prince Dabi From Ghana" , action: "purchased a monthly plan", avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg` },
 ];
 
 const socialProofWidget = document.getElementById('social-proof-widget');
